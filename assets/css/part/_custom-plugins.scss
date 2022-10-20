@@ -1,0 +1,15 @@
+// if you want to override css plugin's definition,
+// put it here!
+
+// owl carousel
+// @note
+// used to fix the "hidden" when changing from slide 1 to slide 2 background image...
+.owl-carousel {
+  .owl-item {
+    -webkit-backface-visibility: visible;
+
+    img {
+      transform-style: flat;
+    }
+  }
+}

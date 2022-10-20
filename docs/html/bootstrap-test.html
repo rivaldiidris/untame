@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/prism.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    <style>
+        .container > .row > .col-md-1,
+        .container > .row > .col-xs-1 {
+            color: white;
+            min-height: 150px;
+        }
+    </style>
+
+    <title></title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+        <div class="col-md-1">COL-MD-1</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+        <div class="col-xs-1">COL-XS-1</div>
+    </div>
+</div>
+
+<script src="../../assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/js/fx-utils.js"></script>
+<script src="assets/js/prism.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+    (function ($) {
+
+        var initialColors = [50, 100, 0];
+
+        $(".row > .col-md-1").each(function () {
+
+            initialColors[0] += 10;
+            initialColors[1] += 10;
+            initialColors[2] += 10;
+
+            $(this).css("background-color", "rgb(" + initialColors.join(",") + ")");
+        });
+
+        initialColors = [100, 50, 0];
+
+        $(".row > .col-xs-1").each(function () {
+
+            initialColors[0] += 10;
+            initialColors[1] += 10;
+            initialColors[2] += 10;
+
+            $(this).css("background-color", "rgb(" + initialColors.join(",") + ")");
+        });
+
+    }(jQuery));
+</script>
+</body>
+</html>

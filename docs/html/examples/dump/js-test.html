@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div onmouseover="this.setAttribute('data-src', Math.random());" data-src="">Mouseover me!</div>
+
+<script>
+
+    var human = {
+        id: "abc-def-ghi"
+    };
+
+    var man = Object.create(human);
+
+    man.name = "Faisal";
+    man.age = 20;
+    man.nationality = "Indonesia";
+
+    var job = Object.create(man);
+
+    job.name = "Front-end";
+    job.description = "Doing UI stuff";
+
+    var Person = function (name) {
+        this.name = name;
+    };
+
+    var fn = Person.prototype = Object.create(man);
+
+    fn.print = function (str) {
+        console.log(str);
+    };
+
+    fn.sayName = function () {
+        this.print(this.name);
+    };
+
+    fn.sayNationality = function () {
+        this.print(this.nationality);
+    };
+
+    var Faisal = new Person("Faisal");
+
+    Faisal.sayName();
+    Faisal.sayNationality();
+
+    Faisal.nationality = "British";
+
+    Faisal.sayNationality();
+
+    console.log(man.nationality);
+
+</script>
+
+</body>
+</html>

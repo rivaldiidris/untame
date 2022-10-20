@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../../assets/css/style.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title>Debugger</title>
+</head>
+<body>
+
+<div class="container">
+    
+</div>
+
+<!--[if IE 8]><script src="../../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../../assets/js/fx-utils.js"></script>
+<script src="../../../../assets/js/fx-utils-extension/Debugger.js"></script>
+<script>
+
+    FXM.Debugger.logWindowInfo();
+    FXM.Debugger.logBodyInfo();
+
+    setInterval(function () {
+        FXM.Debugger.add(FXM.stringFormat("Hello written on %s.", (new Date)));
+    }, 3000);
+
+</script>
+</body>
+</html>

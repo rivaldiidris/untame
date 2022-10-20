@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <style>
+        .js-fix-height {
+            background-color: lightblue;
+            cursor: pointer;
+            margin: 15px 0;
+            padding: 15px;
+            -webkit-user-select: none;
+            user-select: none;
+            box-shadow: 3px 3px 1px black;
+        }
+
+        .js-fix-height:hover {
+            background-color: deepskyblue;
+            transition: background-color 0.35s linear;
+        }
+
+        .js-fix-height h3 {
+            border-bottom: solid 5px black;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        .parent {
+            overflow: hidden;
+        }
+
+        .border-col .col-sm-4,
+        .border-col .col-md-3 {
+            border: solid 1px black;
+            margin-bottom: 15px;
+        }
+
+        .parent-n {
+            border-bottom: solid 1px black;
+            clear: both;
+            overflow: hidden;
+            padding: 25px 0;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1>Normal Usage</h1>
+        <div class="parent">
+            <div class="col-md-6">
+                <div class="js-fix-height">
+                    <h3>Mr. Azwar "x-syam" Syam Srg.</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur dignissimos dolor eaque illum iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia qui velit?</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="js-fix-height">
+                    <h3>Mr. Faisal Err</h3>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="col-md-6">
+                <div class="js-fix-height">
+                    <h3>Mr. Kevin P.</h3>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="js-fix-height">
+                    <h3>Mr. Azwar "x-syam" Syam Srg.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="col-md-6">
+                <div class="js-fix-height">
+                    <h3>Mr. Faisal Err</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquid asperiores dolorum ex expedita ipsa laborum modi molestias nulla! Accusamus aut eaque eius excepturi fugiat maxime quam, rem. Cumque et ex fugit libero minus officia quibusdam quidem quos reprehenderit! A ad corporis cupiditate deleniti fuga id molestiae, unde ut.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquid asperiores dolorum ex expedita ipsa laborum modi molestias nulla! Accusamus aut eaque eius excepturi fugiat maxime quam, rem. Cumque et ex fugit libero minus officia quibusdam quidem quos reprehenderit! A ad corporis cupiditate deleniti fuga id molestiae, unde ut.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquid asperiores dolorum ex expedita ipsa laborum modi molestias nulla! Accusamus aut eaque eius excepturi fugiat maxime quam, rem. Cumque et ex fugit libero minus officia quibusdam quidem quos reprehenderit! A ad corporis cupiditate deleniti fuga id molestiae, unde ut.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="js-fix-height">
+                    <h3>Mr. Kevin P.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button>Detach Same Height</button>
+    <button>Recalculate</button>
+
+    <hr/>
+    <div class="row border-col">
+        <div class="col-xs-12">
+            <h1>Same Height by Parent Every <strong>n</strong> Item(s)</h1>
+            <p class="alert alert-danger">This feature has not been documented. If this has, please remove this paragraph.</p>
+            <p class="alert alert-info">Please take a look and guess what this feature does (Hint: Resize your browser's window size).</p>
+        </div>
+
+        <div class="col-xs-12">
+            <h2>Parent 1</h2>
+        </div>
+        <div class="parent-n">
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <h2>Parent 2</h2>
+        </div>
+        <div class="parent-n">
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <h2>Parent 3</h2>
+        </div>
+        <div class="parent-n">
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 parent-n-child">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis porro sit unde voluptate. Cumque excepturi iure nisi officia sapiente?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+    $(function () {
+        var $button = $("button"),
+                sameHeightParentFooter;
+
+        $button.eq(0).on("click", function () {
+            sameHeightParentFooter.detach();
+        });
+
+        $button.eq(1).on("click", function () {
+            sameHeightParentFooter.calculate();
+        });
+
+        sameHeightParentFooter = FXM.sameHeightByParent(".js-fix-height", ".parent", {
+            disableAt: 767
+        });
+
+        var sameHeightParentEvery = FXM.sameHeightByParent('.parent-n-child', '.parent-n', {
+            disableAt: 480,
+            everyOnWindowSize: [
+                {
+                    from: 481,
+                    to: 767,
+                    makeItemSameHeightEvery: 2
+                },
+                {
+                    from: 768,
+                    to: 991,
+                    makeItemSameHeightEvery: 3
+                },
+                {
+                    from: 992,
+                    to: -1,
+                    makeItemSameHeightEvery: 4
+                }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

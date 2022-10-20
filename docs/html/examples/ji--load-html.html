@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        header, section, footer {
+            border: solid 3px black;
+            margin: 25px auto;
+            max-width: 500px;
+            padding: 25px;
+        }
+    </style>
+    <title>Load HTML | Example</title>
+</head>
+<body>
+
+<header></header>
+
+<section>
+    <button class="empty">Empty Header — Footer</button>
+    <button class="load">Re-Load Header — Footer</button>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad adipisci, alias beatae corporis culpa cumque debitis eaque expedita illum in, ipsam nostrum odio officia omnis optio placeat quas quis rem sint suscipit tenetur totam, vero voluptate! Asperiores autem earum facere, harum id labore laudantium, mollitia nisi officia perferendis quaerat quo, recusandae rerum saepe vero. Aperiam assumenda autem corporis debitis deserunt dolorem hic laboriosam modi nemo nesciunt nisi odit provident quas quidem rem, repellat rerum similique. Accusamus asperiores aut doloremque ex excepturi hic laboriosam magnam magni minus provident, quisquam quod, recusandae reiciendis, similique veniam vitae voluptas. Accusantium, molestias, vero.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad adipisci, alias beatae corporis culpa cumque debitis eaque expedita illum in, ipsam nostrum odio officia omnis optio placeat quas quis rem sint suscipit tenetur totam, vero voluptate! Asperiores autem earum facere, harum id labore laudantium, mollitia nisi officia perferendis quaerat quo, recusandae rerum saepe vero. Aperiam assumenda autem corporis debitis deserunt dolorem hic laboriosam modi nemo nesciunt nisi odit provident quas quidem rem, repellat rerum similique. Accusamus asperiores aut doloremque ex excepturi hic laboriosam magnam magni minus provident, quisquam quod, recusandae reiciendis, similique veniam vitae voluptas. Accusantium, molestias, vero.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad adipisci, alias beatae corporis culpa cumque debitis eaque expedita illum in, ipsam nostrum odio officia omnis optio placeat quas quis rem sint suscipit tenetur totam, vero voluptate! Asperiores autem earum facere, harum id labore laudantium, mollitia nisi officia perferendis quaerat quo, recusandae rerum saepe vero. Aperiam assumenda autem corporis debitis deserunt dolorem hic laboriosam modi nemo nesciunt nisi odit provident quas quidem rem, repellat rerum similique. Accusamus asperiores aut doloremque ex excepturi hic laboriosam magnam magni minus provident, quisquam quod, recusandae reiciendis, similique veniam vitae voluptas. Accusantium, molestias, vero.</p>
+</section>
+
+<footer></footer>
+
+<!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+    $(function () {
+        var empty = function () {
+            $("header, footer").empty();
+        };
+
+        var load = function () {
+            empty();
+            FXM.loadHtml("header", "ji--lh-header.html", function () { alert("Header document loaded!"); });
+            FXM.loadHtml("footer", "ji--lh-footer.html", function () { alert("Footer document loaded!"); });
+        };
+
+        load();
+
+        $(".empty").on("click", empty);
+        $(".load").on("click", load);
+    });
+</script>
+</body>
+</html>

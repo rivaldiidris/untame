@@ -1,0 +1,201 @@
+@import "../../../../assets/css/part/variables";
+@import "../../../../assets/css/part/mixins";
+
+$fx-blue: #0095cd;
+$fx-blue-light: #dcffef;
+$fx-blue2: #4CCEFF;
+
+body {
+  background-color: $fx-blue-light;
+}
+
+//<editor-fold desc="Bootstrap Override">
+.breadcrumb {
+  background-color: $fx-blue;
+  color: $white;
+
+  a {
+    color: inherit;
+  }
+
+  li {
+    &.active {
+      color: inherit;
+      font-weight: bold;
+      position: relative;
+    }
+  }
+}
+//</editor-fold>
+
+//<editor-fold desc="Own Widget">
+.file-list {
+  @include border-radius(5px);
+  background-color: $fx-blue2;
+  color: $black;
+  padding: 15px 35px;
+
+  li {
+    font-weight: bold;
+  }
+
+  .glyphicon {
+    color: #ffff00;
+    margin-right: 10px;
+
+    &.glyphicon-file {
+      color: $white;
+    }
+  }
+}
+
+.group-widget {
+  background-color: $white;
+  border: solid 3px $fx-blue;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  padding: 15px;
+
+  h3 {
+    font-size: em(22);
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+  }
+}
+//</editor-fold>
+
+//<editor-fold desc="Base Layout">
+.wrapper-full {
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media (min-width: 320px) {
+    width: 300px;
+  }
+
+  @media (min-width: 480px) {
+    width: 460px;
+  }
+
+  @media (min-width: 640px) {
+    width: 620px;
+  }
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+//</editor-fold>
+
+//<editor-fold desc="Layout">
+header {
+  .wrapper-full {
+    background: $fx-blue;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .wrapper {
+    h1 {
+      margin: 0;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  .wrapper-full {
+    background: $fx-blue;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+
+  .wrapper {
+    color: $white;
+
+    h6 {
+      font-size: em(24);
+      margin: 0 0 5px 0;
+    }
+
+    h6 + span {
+      font-size: em(16px);
+    }
+  }
+}
+
+#content {
+  padding: 25px 0;
+
+  @media (min-width: 640px) {
+    padding: 25px;
+  }
+}
+//</editor-fold>
+
+//<editor-fold desc="Plugins">
+.js-grouping {
+  &.is-grouping-active {
+    .js-grouping-title-wrapper {
+      .js-group-title {
+        background-color: $fx-blue;
+        border-color: $black;
+      }
+    }
+
+    .js-grouping-content-wrapper {
+      display: block;
+    }
+  }
+
+  .js-grouping-title-wrapper {
+    .js-group-title {
+      @include user-select();
+      background-color: $fx-blue2;
+      border-bottom: solid 3px $fx-blue;
+      color: #000;
+      cursor: pointer;
+      font-size: em(24);
+      font-weight: bold;
+      padding: 7px 15px;
+
+      &:hover {
+        background-color: $fx-blue;
+      }
+    }
+  }
+
+  .js-grouping-content-wrapper {
+    background-color: $white;
+    display: none;
+    padding: 15px;
+
+    .group-widget {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
+//</editor-fold>
+
+.underline {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.js-footer-is-sticked {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

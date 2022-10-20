@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <style>
+        .sticky-inner {
+            background: rgba(0, 0, 0, 0.25);
+            border-bottom: yellow;
+            height: 50px;
+        }
+
+        .js-fxm-sticky {
+            border-top: solid 5px black;
+        }
+
+        .is-sticky,
+        .is-sticky-offset-minus {
+            left: 0;
+            position: fixed;
+            width: 100%;
+            z-index: 9;
+        }
+
+        .is-sticky {
+            top: 0;
+        }
+
+        .is-sticky-offset-minus {
+            top: 50px;
+        }
+
+        .is-sticky-offset-minus .sticky-inner {
+            background: rgba(255, 255, 0, 0.25);
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+
+
+<div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+</div>
+
+<div class="sticky">
+    <div class="sticky-inner">
+        <div class="container">
+            I am sticked!
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <div class="sticky-offset-minus">
+        <div class="sticky-inner">
+            <div class="container">
+                I am sticked (with offset minus by previous sticky (+/- <strong>-50px</strong>)!
+            </div>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+</div>
+
+<div class="off-bottom"></div>
+
+<div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eaque excepturi numquam perspiciatis quo. Ab aperiam blanditiis, et hic in ipsa laboriosam nam, possimus quas quia quisquam quos, similique vero! Beatae blanditiis cumque doloribus ea eaque, exercitationem facere illum impedit in provident, quam recusandae reprehenderit repudiandae suscipit temporibus ut voluptatem?</p>
+</div>
+
+<!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+    $(function () {
+
+        FXM.sticky('.sticky', {
+            disableAt: 767,
+            onsticked: function () {
+                console.log("sticked!")
+            },
+            onunsticked: function () {
+                console.log("un-sticked!")
+            }
+        });
+
+        FXM.sticky('.sticky-offset-minus', {
+            classSticked: 'is-sticky-offset-minus',
+            disableAt: 767,
+            offset: function () {
+                var ret = 0;
+                var $s = $('.sticky');
+
+                if ($s.hasClass('is-sticky')) {
+                    ret = $s.outerHeight();
+                }
+
+                return -1 * ret;
+            },
+            onsticked: function () {
+                console.log("sticked!")
+            },
+            onunsticked: function () {
+                console.log("un-sticked!")
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

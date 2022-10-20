@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div class="content">
+    <script type="text/html" id="my-template">
+        <h1><%= data.sub.data.very.long.title %></h1>
+        <h2><%= data["Even Space Data"]["Nice Space Data"] %></h2>
+        <h3><%= data.title %></h3>
+        <% if (data && data.showParagraph) { %>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore eveniet ipsa pariatur voluptate. Adipisci alias at atque, dignissimos maiores nam nesciunt nihil nobis sapiente sint? Autem obcaecati perspiciatis quas. Blanditiis ex magni nobis numquam odit quo repudiandae saepe sed sint? Aspernatur commodi consequatur cum cupiditate illum in perferendis ut.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem dolorum excepturi labore magnam, nihil quia vel voluptatem. Ad asperiores consectetur, eius eligendi fugit minus modi mollitia numquam quibusdam tempora! Ab eligendi et magnam nesciunt placeat similique tempora tenetur! Dicta eaque eveniet obcaecati sapiente. Ab adipisci aut blanditiis, doloremque exercitationem nam repellendus. Aliquam aliquid architecto delectus doloribus, et, eum fuga illum in ipsum, laboriosam nihil placeat possimus rerum similique temporibus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cum dicta et id illo praesentium quidem veritatis. Aliquam cum nulla officiis provident. Ducimus enim quod repellat voluptatibus. Accusamus aperiam consequatur cumque cupiditate delectus ducimus eum hic ipsum, labore maiores, nostrum, optio qui quod ratione sequi.</p>
+        <% } else { %>
+        <p>Can't show!</p>
+        <p><%= data.p %></p>
+        <% } %>
+    </script>
+</div>
+
+<!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+FXM.Template.make(".content", "#my-template", {
+    data: {
+        p: "Bad strings --> } %>",
+        title: "Nice!",
+        showParagraph: false,
+        sub: {
+            data: {
+                very: {
+                    long: {
+                        title: "Good!"
+                    }
+                }
+            }
+        },
+        "Even Space Data": {
+            "Nice Space Data": "Yes!!!"
+        }
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!--
+
+DO NOT USE "CTRL+ALT L" IF YOU ARE USING WEBSTORM/PHPSTORM
+CLEAN THE CODE BY YOURSELF...
+THANKS!
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/prism.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <title>JavaScript Internal | FXMedia Front-end Documentation</title>
+</head>
+
+<body>
+
+    <!-- Loaded partially -->
+    <header></header>
+
+    <div id="content" class="">
+        <div class="wrapper">
+            <div class="js-group-widget">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">JavaScript Internal</li>
+                </ol>
+
+                <h2>JavaScript Internal</h2>
+
+                <p>We call any scripts that are created by the company's guys "JavaScript Internal". We need to
+                    document this so that other developers can use what the other developers have done.</p>
+
+                <div class="group-widget" id="back-to-top">
+                    <h3>Back to Top</h3>
+
+                    <p><a href="examples/ji--back-to-top.html" target="_blank">View example</a></p>
+
+                    <p>To use this, simply call the <code>FXM</code> namespace, along with its function member <code>backToTop</code>.
+                        Example:</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        FXM.backToTop(".selector", {
+                            duration: 1000, // in milliseconds
+                            onbeforestart: function () { alert("Before starting!"); }, // callback when before the scrolling start
+                            oncomplete: function () { alert("Finished scrolling!"); }, // callback when finished scrolling to the top
+                            hideClass: "is-hidden"
+                        });
+                    </code>
+                </pre>
+
+                    <p>To remove the animation effect, set the <code>duration</code> to <code>0</code>.</p>
+
+                    <p>You must define the HTML element and its style. Assume that you have a <code>span</code> element
+                        with <code>selector</code> class applied and you have styled it:</p>
+
+                    <p><strong>HTML:</strong></p>
+
+                    <pre class="line-numbers">
+                <code class="language-markup">
+                    &lt;span class="selector"&gt;back to top&lt;/span&gt;
+                </code>
+            </pre>
+
+                    <p><strong>CSS:</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-css">
+                        .selector {
+                            background: blue;
+                            bottom: 10px;
+                            color: white;
+                            cursor: pointer;
+                            display: block;
+                            height: 100px;
+                            line-height: 100px;
+                            position: fixed;
+                            right: 10px;
+                            text-align: center;
+                            width: 100px;
+                            z-index: 1;
+                        }
+                    </code>
+                </pre>
+
+                    <p><strong>Note:</strong></p>
+
+                    <p>When the scroll position is on the most top of the document, class <code>is-hidden</code> or
+                        specified in option is automatically added. We can hide it by applying style to it:</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-css">
+                        .selector.is-hidden {
+                            display: none;
+                        }
+                    </code>
+                </pre>
+
+                    <p>We can also animating it when it's going to hide using CSS transition.</p>
+                </div>
+
+                <div class="group-widget" id="goto">
+                    <h3>Goto</h3>
+
+                    <p><a href="examples/ji--goto.html" target="_blank">View example</a></p>
+
+                    <p>This is used for auto scroll to specific element based on its parent. <code>FXM.goTo</code>
+                        takes two parameters. The first parameter is the parent wrapper of the target element. The
+                        second parameter is the options.</p>
+
+                    <p>Have a look at the example.</p>
+
+                    <p><strong>HTML code (at its simplest structure):</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-markup">
+                        &lt;div class=&quot;parent&quot;&gt;
+                            &lt;div class=&quot;child&quot;&gt;...&lt;/div&gt;
+                            &lt;div class=&quot;child&quot;&gt;...&lt;/div&gt;
+                            &lt;div class=&quot;child active&quot;&gt;...&lt;/div&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+
+                    <p><strong>JavaScript code:</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        var goToInstance = FXM.goTo(".parent", {
+                            onInitRun: false,
+                            targetSelector: ".child.active",
+                            disableAnimationAt: 767,
+                            duration: 500,
+                            delay: 100,
+                            offsetElements: function () {
+                                return 50;
+                            },
+                            onbeforestart: function () { alert("Before starting!"); },
+                            oncomplete: function () { alert("Finished going to!"); }
+                        });
+                    </code>
+                </pre>
+
+                    <p>The options <code>onInitRun</code> is boolean. The default value is true. When set to true, on
+                        first load, it will trigger the auto scroll based on matched <code>targetSelector</code>
+                        element. If no match any, it will not run.</p>
+
+                    <p>When we are creating new instance (Calling <code>FXM.goTo</code>) and pass it to a variable
+                        (e.g. <code>goToInstance</code>), we can call method <code>run</code> to trigger the auto
+                        scroll. Below is example to call the method <code>run</code> on button click.</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        $(function () {
+                            $("button").on("click", function () {
+                                // Call the goTo instance's method (run)
+                                goToInstance.run();
+                            });
+                        });
+                    </code>
+                </pre>
+                </div>
+
+                <div class="group-widget" id="to">
+                    <h3>To</h3>
+
+                    <p><a href="examples/ji--to.html" target="_blank">View example</a></p>
+
+                    <pre class="line-numbers"><code class="language-javascript">FXM.to(selector, options);</code></pre>
+
+                    <p>This is used for animating window scroll to specific position based on <code>selector</code>
+                        argument. There are two important options, they are <code>onInitRun</code> and <code>duration</code>.
+                        By default, <code>onInitRun</code> is set to <code>true</code>, so it would be scrolled to the
+                        target automatically. Set that to <code>false</code> will prevent doing it.</p>
+
+                    <p>You can also combine this function with click event. Please see below example for further
+                        details:</p>
+
+                    <p><strong>HTML code:</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-markup">
+                        &lt;a href="#test" class="bring-me-there"&gt;To There!&lt;/a&gt;
+                        &lt;div class="big-box"&gt;&lt;/div&gt;
+                        &lt;div class="big-box"&gt;
+                            &lt;h1 id="test"&gt;Yellow!&lt;/h1&gt;
+                        &lt;/div&gt;
+                        &lt;div class="big-box"&gt;&lt;/div&gt;
+                    </code>
+                </pre>
+
+                    <p><strong>JavaScript code:</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        $(function () {
+                            var myTarget = FXM.to('#test', {
+                                onInitRun: false,
+                                duration: 2000
+                            });
+
+                            $('.bring-me-there').on('click', function (e) {
+                                e.preventDefault();
+                                myTarget.Run();
+                            });
+                        });
+                    </code>
+                </pre>
+                </div>
+
+                <div class="group-widget" id="load-html">
+                    <h3>Load HTML</h3>
+
+                    <p><a href="examples/ji--load-html.html" target="_blank">View example</a></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        FXM.loadHtml(selector, urlOfHtml, callback);
+                    </code>
+                </pre>
+
+                    <p>To use this, simply call the <code>FXM</code> namespace, along with its function member <code>loadHtml</code>.
+                        Example:</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        FXM.loadHtml("header", "ji--lh-header.html", function () {
+                            alert("Header document loaded!");
+                        });
+
+                        FXM.loadHtml("footer", "ji--lh-footer.html", function () {
+                            alert("Footer document loaded!");
+                        });
+                    </code>
+                </pre>
+
+                    <p>The first line of above code is to load "ji--lh-header.html" file contents into <code>header</code>
+                        tag</p>
+
+                    <p>The fifth line of above code is to load "ji--lh-footer.html" file contents into <code>footer</code>
+                        tag</p>
+
+                    <p>Both first and fifth have optional function that will be called (callback) once the target
+                        document has loaded.</p>
+
+                    <p>The <code>callback</code> parameter has one argument/parameter that is the jQuery element based
+                        on the <code>selector</code> argument.</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        FXM.loadHtml("p.paragraph-intro", "intro.html", function ($paragraphInfo) {
+                            // Parameter $paragraphInfo equals to $("p.paragraph-intro") so we can do stuff with that
+                            // maybe adding new class?
+                            $paragraphInfo.addClass("data-loaded");
+                        });
+                    </code>
+                </pre>
+                </div>
+
+                <div class="group-widget" id="ratio">
+                    <h3>Ratio</h3>
+
+                    <p><a href="examples/ji--ratio.html" target="_blank">View example</a></p>
+
+                    <p>This is used for making any container element has width/height calculating automatically based
+                        on the ratio specified, also recalculate when the browser is resized.</p>
+
+                    <p>Most of the time, we need to calculate and set the height of an element based on given ratio.</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-markup">
+                        &lt;div class=&quot;js-ratio&quot; style=&quot;background-color: #ff0; width: 300px;&quot;&gt;
+                            Content
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+
+                    <p>Use <code>FXM.ratio</code> to init this function. There are three defaults options (<code>disableAt</code>,
+                        <code>ratio</code>, and <code>mode</code>).</p>
+
+                    <p>Options <code>mode</code> has two options (width or height) and by default is set to height.</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        var jsRatio = FXM.ratio(".js-ratio", {
+                            disableAt: -1,
+                            ratio: "3:1", // Ratio value is "width:height", respectively
+                            mode: "height"
+                        });
+                    </code>
+                </pre>
+
+                    <p>By calling <code>FXM.ratio</code> and pass it to the variable like above example (<code>jsRatio</code>),
+                        we can use some of the method such as <code>recalc</code> or <code>parseRatio</code> on it.</p>
+
+                    <p>Method <code>recalc</code> is used for manually recalculate the element's height/width when the
+                        height/width changed, while <code>parseRatio</code> is used for parsing the newly changed ratio
+                        by overriding the <code>options.ratio</code> property.</p>
+
+                    <p>Take a look at below example:</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        // Instantiating new FXM.ratio instance
+                        var jsRatio = FXM.ratio(".js-ratio", {
+                            disableAt: -1,
+                            ratio: "1:1", // Ratio value is "width:height", respectively
+                            mode: "height"
+                        });
+
+                        // Somewhere we wish to change the ratio options
+                        jsRatio.options.ratio = "3:1";
+
+                        // Refresh the ratio value after changing it
+                        jsRatio.parseRatio();
+
+                        // Recalculate the element manually after refreshing the ratio
+                        jsRatio.recalc();
+                    </code>
+                </pre>
+                </div>
+
+                <div class="group-widget" id="same-height">
+                    <h3>Thumbnail Toggle</h3>
+
+                    <p><a href="examples/ji--thumbnail-toggle.html" target="_blank">View example</a></p>
+
+                    <p>This utilizes <code>FXM.thumbnailsToggle</code> to make thumbnail responsive elements with
+                        specific-same class will have the same height based on highest element.
+                        The auto height thumbnail can be disabled by specifying <code>disableAt</code> option.
+                        The default value is <code>-1</code> (This means the auto height thumbnail disabled when
+                        viewport width equals or less than <code>-1</code>).
+                        Specify it by the desired viewport width.
+                        The column on viewport responsive can be setting use option
+                    </p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        var sameBox = FXM.thumbnailsToggle(".item-thumbnails", {
+                            disableAt: 767,
+                            
+                            // default Column
+                            columnOnDesktop: 6,
+                            columnOnTablet: 4,
+                            columnOnMobile: 2,
+                            
+                            // container for viewport
+                            contentCollapse: 'content-collapse',
+                            containerClassDesktop: 'is-desktop',
+                            containerClassTablet: 'is-tablet',
+                            containerClassMobile: 'is-mobile',
+                
+                            // class Item
+                            classItem: 'item-thumbnails',
+                            classDesc: 'item-desc',
+
+                            // default animate scroll
+                            scrollToContent: false,
+                            animate: false,
+                            delayAnimate: 500,
+                            offsetAnimate: 0,
+                
+                            // default data
+                            attribItem: "data-item",
+
+                            // default debug
+                            debug: true,
+
+                            // add css before and after for mark if no content toggle description
+                            styleBeforeAfter: "",
+
+                            // @TODO create the documentation for this
+                            everyOnWindowSize: null
+                
+                            // data
+                            attribItem: 'data-item',
+                        });
+                    </code>
+                </pre>
+
+                    <p><strong>Automatic Generated thumbnails for responsive item in mobile, tablet, and desktop</strong></p>
+
+                    <p>When we call/initializing new <code>FXM.thumbnailsToggle</code>, it will return a new instance
+                        which has <code>calculate</code> and <code>events</code> method. Thus, it's recommended to
+                        assign it to variable by calling it like above code. So, later when we want to re-calculate it,
+                        we can do it by calling <code>calculate()</code>. In above example, we can
+                        call it <code>thumbnailToggle.calculate()</code>.</p>
+
+                    <p><strong>Detaching Same Height</strong></p>
+
+                    <p>Simply call <code>detach</code> method to the same height instance. In above example, we can
+                        call it <code>thumbnailToggle.detach()</code>.</p>
+
+                    <p>This method is used when we want to remove the same height to the elements but in temporary time
+                        until automatic calculation happens.</p>
+
+                    <p><strong>Item Thumbnail and Description</strong></p>
+
+                    <p>When we use this plugin, don't forget to set object property <code>classItem: 'item-thumbnails'</code> and <code>classDesc: 'item-desc'</code>.</p>
+
+                    <p><strong>Scroll into content and Animate scroll to content</strong></p>
+
+                    <p>If we want scrolling to content active, we must set object property <code>scrollToContent: true</code> and to use smooth scrolling use <code>animate: true</code></p>
+
+                </div>
+
+                <div class="group-widget" id="same-height">
+                    <h3>Same height</h3>
+
+                    <p><a href="examples/ji--same-height.html" target="_blank">View example</a></p>
+
+                    <p>This utilizes <code>FXM.sameHeight</code> to make any elements with specific-same class will
+                        have the same height based on highest element. The auto height can be disabled by specifying
+                        <code>disableAt</code> option. The default value is <code>-1</code> (This means the auto height
+                        disabled when viewport width equals or less than <code>-1</code>). Specify it by the desired
+                        viewport width.</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        var sameBox = FXM.sameHeight(".js-fix-height", {
+                            disableAt: 767
+                        });
+                    </code>
+                </pre>
+
+                    <p><strong>Automatic Calculation</strong></p>
+
+                    <p>Happen when the document has been loaded and when the browser's window is resized. If we want to
+                        calculate the elements manually, you can call method <code>calculate</code> on same height
+                        instance.</p>
+
+                    <p>When we call/initializing new <code>FXM.sameHeight</code>, it will return a new instance which
+                        has <code>calculate</code> method. Thus, it's recommended to assign it to variable by calling
+                        it like above code. So, later when we want to re-calculate it, we can do it by calling <code>sameHeightInstance.calculate()</code>.
+                        In above example, we can call it <code>sameBox.calculate()</code>.</p>
+
+                    <p><strong>Detaching Same Height</strong></p>
+
+                    <p>Simply call <code>detach</code> method to the same height instance. In above example, we can
+                        call it <code>sameBox.detach()</code>.</p>
+
+                    <p>This method is used when we want to remove the same height to the elements but in temporary time
+                        until automatic calculation happens.</p>
+                </div>
+
+                <div class="group-widget" id="same-height-by-parent">
+                    <h3>Same height by Parent Element</h3>
+
+                    <p><a href="examples/ji--same-height-by-parent.html" target="_blank">View example</a></p>
+
+                    <p>This method is slightly the same as <code>FXM.sameHeight</code>, the only difference is that
+                        this method will make the elements' height based on highest element in specified parent.</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        var sameBox = FXM.sameHeightByParent(".js-fix-height", ".parent", {
+                            disableAt: 767
+                        });
+                    </code>
+                </pre>
+
+                    <p>You need to specify the parent selector. Above example means make every <code>.js-fix-height</code>
+                        elements have the same height, but in <code>.parent</code> scope. Please see the example.</p>
+                </div>
+
+                <div class="group-widget" id="footer-stick-to-bottom">
+                    <h3>Footer Stick to Bottom</h3>
+                </div>
+
+                <div class="group-widget" id="sticky">
+                    <h3>Sticky</h3>
+
+                    <p><a href="examples/ji--sticky.html" target="_blank">View example</a></p>
+
+                    <p><strong>HTML code:</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-markup">
+                        &lt;div class=&quot;sticky&quot;&gt;
+                            &lt;div class=&quot;sticky-inner&quot;&gt;
+                                &lt;div class=&quot;container&quot;&gt;
+                                    I am sticked!
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+
+                    <p><strong>JavaScript code:</strong></p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        FXM.sticky(".sticky", {
+                            disableAt: 767,
+                            onsticked: function () {
+                                console.log("sticked!")
+                            },
+                            onunsticked: function () {
+                                console.log("un-sticked!")
+                            }
+                        });
+                    </code>
+                </pre>
+
+                    <p><strong>Note:</strong></p>
+
+                    <p>You need to manually apply the CSS when the content is on sticky mode. The class <code>is-sticky</code>
+                        will be applied to the target element when it's on sticky state. See the example.</p>
+
+                    <p>There is also callback function when the target element stick and unstick. They are both called
+                        <code>onsticked</code> and <code>onunsticked</code> respectively.</p>
+                </div>
+
+                <div class="group-widget" id="bootstrap-auto-accordion">
+                    <h3>[Bootstrap] Auto Accordion</h3>
+
+                    <p><a href="examples/bootstrap/auto-accordion.html" target="_blank">View example</a></p>
+
+                    <p>This is used for Bootstrap Collapse (Accordion version). What this does is to make ID generated
+                        automatically for each accordion item.</p>
+
+                    <p>Automatic scroll can be achieved by attaching your own <code>data-id="your-provided-id"</code>
+                        to the <code>.panel-title</code> element.</p>
+
+                    <p>You only need to add <code>.js-panel-group</code> class to the accordion wrapper and trigger the
+                        plugin by calling <code>FXM.bsAccordion();</code>. See below example.</p>
+
+                    <div class="alert alert-info">
+                        To disable another accordion being closed when one of them clicked, add <code>data-parent-disabled="true"</code>
+                        attribute to the <code>panel-group</code> item.
+                    </div>
+
+                    <p>Below is the example:</p>
+
+                    <p>HTML markup:</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-markup">
+                        &#x3C;div class=&#x22;panel-group js-panel-group&#x22; aria-multiselectable=&#x22;true&#x22;&#x3E;
+                            &#x3C;div class=&#x22;panel panel-default&#x22;&#x3E;
+                                &#x3C;div class=&#x22;panel-heading&#x22;&#x3E;
+                                    &#x3C;h4 class=&#x22;panel-title&#x22;&#x3E;
+                                        &#x3C;a data-toggle=&#x22;collapse&#x22; aria-expanded=&#x22;true&#x22;&#x3E;
+                                            Collapsible Group Item #1
+                                        &#x3C;/a&#x3E;
+                                    &#x3C;/h4&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;panel-collapse collapse in&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;panel-body&#x22;&#x3E;
+                                        Collapsible Group Item Contents #1.
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                            &#x3C;div class=&#x22;panel panel-default&#x22;&#x3E;
+                                &#x3C;div class=&#x22;panel-heading&#x22;&#x3E;
+                                    &#x3C;h4 class=&#x22;panel-title&#x22;&#x3E;
+                                        &#x3C;a class=&#x22;collapsed&#x22; data-toggle=&#x22;collapse&#x22; aria-expanded=&#x22;false&#x22;&#x3E;
+                                            Collapsible Group Item #2
+                                        &#x3C;/a&#x3E;
+                                    &#x3C;/h4&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;panel-collapse collapse&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;panel-body&#x22;&#x3E;
+                                        Collapsible Group Item Contents #2.
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                            &#x3C;div class=&#x22;panel panel-default&#x22;&#x3E;
+                                &#x3C;div class=&#x22;panel-heading&#x22;&#x3E;
+                                    &#x3C;h4 class=&#x22;panel-title&#x22; data-id=&#x22;collapse-3&#x22;&#x3E;
+                                        &#x3C;a class=&#x22;collapsed&#x22; data-toggle=&#x22;collapse&#x22; aria-expanded=&#x22;false&#x22;&#x3E;
+                                            Collapsible Group Item #3
+                                        &#x3C;/a&#x3E;
+                                    &#x3C;/h4&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;panel-collapse collapse&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;panel-body&#x22;&#x3E;
+                                        Collapsible Group Item Contents #3.
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    </code>
+                </pre>
+
+                    <p>... and call the JavaScript function:</p>
+
+                    <pre class="line-numbers">
+                    <code class="language-javascript">
+                        $(function () {
+                            FXM.bsAccordion();
+                        });
+                    </code>
+                </pre>
+
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loaded partially -->
+    <footer></footer>
+
+    <script src="../../assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/fx-utils.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

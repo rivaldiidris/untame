@@ -1,0 +1,115 @@
+<!-- @TODO add more samples and documentation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../../assets/css/style.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title>Custom Modal</title>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <h3>Show Modal</h3>
+        <p>
+            <a href="#" id="modal-small--show-modal" class="btn btn-primary">Small Modal</a>
+            <a href="#" id="modal-medium--show-modal" class="btn btn-primary">Medium Modal</a>
+            <a href="#" id="modal-large--show-modal" class="btn btn-primary">Large Modal</a>
+        </p>
+    </div>
+    <div>
+        <h3>Set Content</h3>
+        <div class="form-group">
+            <textarea rows="5" class="form-control js-set-content-source">The quick brown fox jumps over the lazy dog.</textarea>
+        </div>
+        <p>
+            <a href="#modal-small" class="btn btn-primary js-set-content">Small Modal</a>
+            <a href="#modal-medium" class="btn btn-primary js-set-content">Medium Modal</a>
+            <a href="#modal-large" class="btn btn-primary js-set-content">Large Modal</a>
+        </p>
+    </div>
+    <div>
+        <h3>Get Content</h3>
+        <p>
+            <a href="#" id="modal-small--get-content" class="btn btn-primary">Small Modal</a>
+            <a href="#" id="modal-medium--get-content" class="btn btn-primary">Medium Modal</a>
+            <a href="#" id="modal-large--get-content" class="btn btn-primary">Large Modal</a>
+        </p>
+    </div>
+</div>
+
+<!--[if IE 8]><script src="../../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../../assets/js/fx-utils.js"></script>
+<script src="../../../../assets/js/fx-utils-extension/CustomModal.js"></script>
+<script>
+
+    var CustomModal = FXM.Components.CustomModal;
+
+    if (CustomModal) {
+        var $txtSetContent = $(".js-set-content-source");
+        var $btnSetContent = $(".js-set-content");
+
+        var id = {
+            modalSmall: "#modal-small",
+            modalMedium: "#modal-medium",
+            modalLarge: "#modal-large"
+        };
+
+        var instance = {};
+
+        instance[id.modalSmall] = CustomModal({
+            modalSize: CustomModal.SIZE.SMALL
+        });
+
+        instance[id.modalMedium] = CustomModal({
+            modalSize: CustomModal.SIZE.MEDIUM
+        });
+
+        instance[id.modalLarge]  = CustomModal({
+            modalSize: CustomModal.SIZE.LARGE
+        });
+
+        $(id.modalSmall + "--show-modal").on("click", function () {
+            instance[id.modalSmall].show();
+        });
+
+        $(id.modalMedium + "--show-modal").on("click", function () {
+            instance[id.modalMedium].show();
+        });
+
+        $(id.modalLarge + "--show-modal").on("click", function () {
+            instance[id.modalLarge].show();
+        });
+
+        $(id.modalSmall + "--get-content").on("click", function () {
+            alert(instance[id.modalSmall].getModalContent().html());
+        });
+
+        $(id.modalMedium + "--get-content").on("click", function () {
+            alert(instance[id.modalMedium].getModalContent().html());
+        });
+
+        $(id.modalLarge + "--get-content").on("click", function () {
+            alert(instance[id.modalLarge].getModalContent().html());
+        });
+
+        $btnSetContent.on("click", function (e) {
+            e.preventDefault();
+
+            var href = $(this).attr("href");
+            var modal = instance[href];
+
+            if (modal) {
+                modal.setContent($txtSetContent.val());
+                modal.show();
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

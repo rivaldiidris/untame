@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <meta charset="UTF-8">
+    <style>
+        .parent {
+            margin: 50px auto;
+            max-width: 400px;
+        }
+
+        .box {
+            background-color: black;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        @media (min-width: 501px) {
+            .by-width {
+                height: 100px;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .by-width {
+                height: 150px;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .by-width {
+                height: 200px;
+            }
+        }
+    </style>
+    <title>Ratio | Example</title>
+</head>
+<body>
+
+<div class="parent">
+    <h1>This is inside parent</h1>
+    <div class="by-width box">
+        I'm by width (3:1)
+    </div>
+</div>
+
+<div class="parent">
+    <h1>This is inside parent</h1>
+    <div class="by-height box">
+        I'm by height (5:1)
+    </div>
+</div>
+
+<div class="js-ratio" style="background-color: #ff0; width: 300px;">
+    Content
+</div>
+
+<!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+    $(function () {
+        FXM.ratio(".by-width", {
+            disableAt: 500,
+            mode: "width",
+            ratio: "3:1"
+        });
+
+        FXM.ratio(".by-height", {
+            mode: "height",
+            ratio: "1:1"
+        });
+
+        var jsRatio = FXM.ratio(".js-ratio", {
+            disableAt: -1,
+            ratio: "1:1",
+            mode: "height"
+        });
+
+        jsRatio.options.ratio = "5:1";
+        jsRatio.parseRatio();
+        jsRatio.recalc();
+    });
+</script>
+</body>
+</html>

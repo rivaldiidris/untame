@@ -1,0 +1,136 @@
+<!--
+
+DO NOT USE "CTRL+ALT L" IF YOU ARE USING WEBSTORM/PHPSTORM
+CLEAN THE CODE BY YOURSELF...
+
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/prism.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title>SCSS (SASS-CSS) | FXMedia Front-end Documentation</title>
+</head>
+<body>
+
+<!-- Loaded partially -->
+<header></header>
+
+<div id="content" class="">
+    <div class="wrapper">
+        <div>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">SCSS (SASS-CSS)</li>
+            </ol>
+
+            <h2>SCSS (SASS-CSS)</h2>
+            <p>We choose SASS as our preprocessor CSS language.
+                SASS lets you use features that don't exist in CSS yet like variables, nesting, mixins, inheritance and other nifty goodies that make writing CSS fun.</p>
+
+            <p><strong>Index</strong></p>
+            <ol>
+                <li><a href="#scss-installing">Installing SASS</a></li>
+                <li><a href="#scss-compiler">Compiler</a></li>
+                <li><a href="#scss-partials">Partials</a></li>
+            </ol>
+
+            <div class="group-widget" id="scss-installing">
+                <h3>Installing SASS</h3>
+                <p>Before you start using Sass you will need to install <code>Ruby</code>. <a href="http://rubyinstaller.org/" target="_blank">Download Ruby</a> </p>
+                <p>After finished installing Ruby, open your Command Prompt and type below code:</p>
+                <pre>gem install sass</pre>
+            </div>
+
+            <div class="group-widget" id="scss-compiler">
+                <h3>Compiler</h3>
+                <p>We need compiler to generate the CSS file. One of recommended free application is <code>Koala</code>.<a href="http://koala-app.com/" target="_blank"> Download Koala</a></p>
+                <h4>Add project</h4>
+                <ol>
+                <li>Drag and drop a folder into the window to add a project, or click on the plus icon in the top left corner and select your project folder.
+                <br/> Select main folder of each project, Koala will automatically searching for <code>.scss</code> files and listed it.
+                </li>
+
+                <li>Click the SCSS file options menu will appear from right, default option of Auto Compile is ticked.
+                <br/>Any changes of SCSS file from other editor Koala will automatically compile the file.
+                 </li>
+                </ol>
+                 <img src="assets/img/screenshot/scss-koala.png" width="600">
+
+                <h4>WebStorm IDE Setup</h4>
+                <div class="alert alert-warning">
+                    You must install the Ruby as stated above before configuring this.
+                </div>
+                <p>We can also use WebStorm editor to compile our SCSS file to CSS with some configuration</p>
+                <ol>
+                    <li>Open or create your project folder in WebStorm then click settings</li>
+                    <li>Select Tools > File Watcher</li>
+                    <li>Add a new file watcher by clicking <code>+</code> in top right and select SCSS</li>
+                    <li>By default the option Immediate file synchronization is ticked, you can untick this option if you don't need it auto compile immediately after you finish typing</li>
+                </ol>
+                <img src="assets/img/screenshot/scss-webstorm.png" width="500"/>
+            </div>
+
+            <div class="group-widget" id="scss-partials">
+                <h3>Partials</h3>
+                    <ul class="file-list">
+                        <li>
+                            <span class="glyphicon glyphicon-folder-open"></span> assets
+                            <ul>
+                                <li>
+                                    <span class="glyphicon glyphicon-folder-open"></span> css
+                                    <ul>
+                                        <li>
+                                            <span class="glyphicon glyphicon-folder-open"></span> part
+                                            <ul>
+                                                <li><span class="glyphicon glyphicon-file"></span> _base.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _custom-bootstrap.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _custom-plugins.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _fonts.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _global-style.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _layout.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _mixins.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _modules.scss</li>
+                                                <li><span class="glyphicon glyphicon-file"></span> _variables.scss</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="glyphicon glyphicon-file"></span> style.scss</li>
+                                        <li><span class="glyphicon glyphicon-file"></span> style.css</li>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>
+                <p>Please write your SCSS code based on the partial files, and put it all inside of part folder with <code>_/underscore</code> prefix of naming file. </p>
+                <ol>
+                    <li><code>style.scss</code> In this file please put only <code>Fonts</code> and <code>Import Files</code></li>
+                    <li><code>_base.scss</code> In this file put your style about base element properties. ie.<code>body, margin, padding, p, H1, H2 etc.</code> </li>
+                    <li><code>_custom-bootstrap.scss</code> If you want to edit Bootstrap style, please put it here. <br/>
+                    Please note to avoid using <code>!important</code>, instead please use specific class parent.
+                    </li>
+                    <li><code>_custom-plugins.scss</code> If we have external plugins CSS from third party, please do custom style here. Please note to not edit the default CSS plugins and avoid using <code>!important</code></li>
+                    <li><code> _fonts.scss</code> Global fonts (e.g. embedded or external fonts) definition put it all here</li>
+                    <li><code> _global-style.scss</code> Global element properties and classes put it all here</li>
+                    <li><code>_layout.scss</code> Main layout <code>header, content, nav, aside, footer</code> styling are here </li>
+                    <li><code>_mixins.scss</code> Collect groups of CSS declarations that you want to reuse throughout your site here</li>
+                    <li><code>_modules.scss</code> Group of widgets, modules like social media, tabs, slider etc. </li>
+                    <li><code>_variables.scss</code>Collect all variables that you want to reuse throughout your stylesheet like group of colors here</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Loaded partially -->
+<footer></footer>
+
+<script src="../../assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/js/fx-utils.js"></script>
+<script src="assets/js/prism.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

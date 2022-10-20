@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <style>
+        body{
+            height: 2000px;
+        }
+        .js-every {
+            border: solid 1px black;
+            margin-bottom: 25px;
+        }
+
+        .item-thumbnails {
+            background-color: lightblue;
+            cursor: pointer;
+            padding: 15px;
+            -webkit-user-select: none;
+            user-select: none;
+            box-shadow: 3px 3px 1px black;
+        }
+
+        .item-thumbnails.active {
+            background-color: deepskyblue;
+        }
+
+        .item-desc {
+            color: white;
+            background-color: #2c2c2c;
+            padding: 15px;
+        }
+
+        .item-desc.active {
+            display: block;
+        }
+
+        .item-thumbnails:hover {
+            background-color: deepskyblue;
+            transition: background-color 0.35s linear;
+        }
+
+        .item-thumbnails h3 {
+            border-bottom: solid 5px black;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-1">
+            <h3>Mr. Azwar Sibuan.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-2">
+            <h3>Mr. Faisal Reinaldi</h3>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-3">
+            <h3>Mr. Kevin P.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-4">
+            <h3>Mr. Ruhut Sitompul.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-5">
+            <h3>Mr. Kaka Wijayanto.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-6">
+            <h3>Mr. Prasetyo Pranowo.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-7">
+            <h3>Mr. Joko Widianto.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-8">
+            <h3>Mr. Lukman Prabowo.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-9">
+            <h3>Mrs. Mega Mendung Ditengah Pasifik Ocean.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-10">
+            <h3>Mr. Jelita Indah Purnama.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-11">
+            <h3>Mrs. Senja Ningrum.</h3>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-12">
+            <h3>Mr. Azwar Sibuan.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-13">
+            <h3>Mr. Faisal Reinaldi</h3>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-14">
+            <h3>Mr. Kevin P.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-15">
+            <h3>Mr. Ruhut Sitompul.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-16">
+            <h3>Mr. Kaka Wijayanto.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-17">
+            <h3>Mr. Prasetyo Pranowo.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-18">
+            <h3>Mr. Joko Widianto.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-19">
+            <h3>Mr. Lukman Prabowo.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-20">
+            <h3>Mrs. Mega Mendung Ditengah Pasifik Ocean.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-21">
+            <h3>Mr. Jelita Indah Purnama.</h3>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 item-thumbnails" data-person="item-22">
+            <h3>Mrs. Senja Ningrum.</h3>
+        </div>
+    </div>
+    <div class="content-collapse">
+        <div class="item-desc" data-person="item-1">
+            <p>Mr. azwar Sibuan is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-2">
+            <p>Mr. Faisal Reinadi is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-3">
+            <p>Mr. Kevin P is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-4">
+            <p>Mr. Ruhut Sitompol is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-5">
+            <p>Mr. Kaka Wijayanto is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-6">
+            <p>Mr. Prasetyo Pranowo is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-7">
+            <p>Mr. Joko Widianto is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-8">
+            <p>Mr. Lukman Prabowo is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-9">
+            <p>Mrs. Mega Mendung Ditengah is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                consequuntur dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-10">
+            <p>Mrs. Jelita Indah Purnama is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                consequuntur dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-11">
+            <p>Mr. azwar Sibuan is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-12">
+            <p>Mr. Faisal Reinadi is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-13">
+            <p>Mr. Kevin P is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-14">
+            <p>Mr. Ruhut Sitompol is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-15">
+            <p>Mr. Kaka Wijayanto is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-16">
+            <p>Mr. Prasetyo Pranowo is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-17">
+            <p>Mr. Joko Widianto is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-18">
+            <p>Mr. Lukman Prabowo is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-19">
+            <p>Mrs. Mega Mendung Ditengah is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                consequuntur dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-20">
+            <p>Mrs. Jelita Indah Purnama is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                consequuntur dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-21">
+            <p>Mr. azwar Sibuan is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-22">
+            <p>Mr. Faisal Reinadi is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-23">
+            <p>Mr. Kevin P is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-24">
+            <p>Mr. Ruhut Sitompol is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-25">
+            <p>Mr. Kaka Wijayanto is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-26">
+            <p>Mr. Prasetyo Pranowo is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-27">
+            <p>Mr. Joko Widianto is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-28">
+            <p>Mr. Lukman Prabowo is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consequuntur
+                dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-29">
+            <p>Mrs. Mega Mendung Ditengah is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                consequuntur dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+        <div class="item-desc" data-person="item-30">
+            <p>Mrs. Jelita Indah Purnama is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                consequuntur dignissimos dolor eaque illum
+                iusto molestiae, molestias non obcaecati pariatur porro praesentium ratione sequi veniam? Ipsa mollitia
+                qui
+                velit?
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <button>Detach Same Height</button>
+        <button>Recalculate</button>
+    </div>
+
+    <!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+    <!--[if !IE]> -->
+    <script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+    <!-- <![endif]-->
+    <script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/fx-utils-concat.js"></script>
+    <script>
+        $(function () {
+            var $button = $("button"),
+                thumbnailToggle;
+
+            $button.eq(0).on("click", function () {
+                thumbnailToggle .detach();
+            });
+
+            $button.eq(1).on("click", function () {
+                thumbnailToggle.calculate();
+            });
+
+            thumbnailToggle = FXM.thumbnailsToggle({
+                disableAt: 767,
+                columnOnDesktop: 4,
+                columnOnTablet: 2,
+                columnOnMobile: 1,
+                // data
+                attribItem: "data-person",
+
+                scrollToContent: true,
+                animate: true,
+                delayAnimate: 500,
+                offsetAnimate: 0,
+
+                // default animate scroll
+                // scrollToContent: false,
+                // animate: false,
+                // delayAnimate: 500,
+                // offsetAnimate: 0,
+
+                // default Column
+                // columnOnDesktop: 6,
+                // columnOnTablet: 4,
+                // columnOnMobile: 2,
+
+                // default container for viewport
+                // contentCollapse: "content-collapse",
+                // containerClassDesktop: "is-desktop",
+                // containerClassTablet: "is-tablet",
+                // containerClassMobile: "is-mobile",
+
+                // if need to calculate text item inner thumbnails
+                // takeHighesTextItem: false,
+                // contentTextItem: "",
+
+                // default class Item
+                // classItem: "item-thumbnails",
+                // classDesc: "item-desc",
+
+                // default data
+                // attribItem: "data-item",
+
+                // default debug
+                // debug: true,
+
+                // add css before and after for mark if no content toggle description
+                // styleBeforeAfter: "",
+
+                // @TODO create the documentation for this
+                // everyOnWindowSize: null
+            });
+
+        });
+    </script>
+</body>
+
+</html>

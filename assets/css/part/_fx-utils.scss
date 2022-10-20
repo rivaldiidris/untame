@@ -1,0 +1,107 @@
+.js-fxm-custom-modal {
+  $MODAL_SIZE_LARGE: 900px;
+  $MODAL_SIZE_MEDIUM: 600px;
+  $MODAL_SIZE_SMALL: 400px;
+  .modal-dialog {
+    .modal-content {
+      @include border-radius(0);
+      @include box-shadow(none);
+      border: none;
+      .modal-header {
+        border-bottom: none;
+        height: 40px;
+        .close {
+          font-size: 36px;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    &.modal-large {
+      .modal-dialog {
+        width: $MODAL_SIZE_LARGE * 0.75;
+      }
+    }
+    &.modal-medium {
+      .modal-dialog {
+        width: $MODAL_SIZE_MEDIUM * 0.80;
+      }
+    }
+    &.modal-small {
+      .modal-dialog {
+        width: $MODAL_SIZE_SMALL * 0.85;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    &.modal-large {
+      .modal-dialog {
+        width: $MODAL_SIZE_LARGE * 0.9;
+      }
+    }
+    &.modal-medium {
+      .modal-dialog {
+        width: $MODAL_SIZE_MEDIUM * 0.9;
+      }
+    }
+    &.modal-small {
+      .modal-dialog {
+        width: $MODAL_SIZE_SMALL * 0.9;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    &.modal-large {
+      .modal-dialog {
+        width: $MODAL_SIZE_LARGE;
+      }
+    }
+    &.modal-medium {
+      .modal-dialog {
+        width: $MODAL_SIZE_MEDIUM;
+      }
+    }
+    &.modal-small {
+      .modal-dialog {
+        width: $MODAL_SIZE_SMALL;
+      }
+    }
+  }
+}
+
+.is-mobile,
+.is-tablet,
+.is-desktop {
+  float: left;
+}
+
+@include respond-to(col-md-up) {
+  &.is-desktop {
+    display: block;
+  }
+  &.is-mobile,
+  &.is-tablet {
+    display: none;
+  }
+}
+
+@include respond-to(col-sm) {
+  &.is-tablet {
+    display: block;
+  }
+  &.is-mobile,
+  &.is-desktop {
+    display: none;
+  }
+}
+
+@include respond-to(col-xs) {
+  &.is-mobile {
+    display: block;
+  }
+  &.is-tablet,
+  &.is-desktop {
+    display: none;
+  }
+}

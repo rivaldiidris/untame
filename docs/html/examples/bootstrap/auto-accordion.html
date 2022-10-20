@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../../../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <title>Auto Accordion</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>With Parent Closed (Accordion Mode)</h3>
+        <p>
+            <em>When duration option is not set, the default is 0ms which has no animation.</em>
+        </p>
+        <div class="panel-group js-panel-group" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" aria-expanded="true">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #1.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #2.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #3.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>With Parent Disabled (Non Accordion, Duration 500ms and Offset -10px)</h3>
+        <button class="js-open-all">Expand All</button>
+        <div class="panel-group js-panel-group" data-offset="10" data-duration="500" data-parent-disabled="true" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" aria-expanded="true">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #1.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #2.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #3.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #4
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #4.
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #5
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #5.
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>No Animation With Parent Disabled (Non Accordion)</h3>
+        <div class="panel-group js-panel-group" data-parent-disabled="true" data-no-animation="true" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" aria-expanded="true">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #1.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #2.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #3.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #4
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #4.
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #5
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #5.
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Custom Selector (Accordion Mode)</h3>
+        <div class="panel-group js-my-custom-panel-group" data-offset="15" data-parent-disabled="false" data-no-animation="false"
+            aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" aria-expanded="true">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #1.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #2.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #3.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #4
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #4.
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-id="collapse-not-3">
+                        <a class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            Collapsible Group Item #5
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Collapsible Group Item Contents #5.
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis cum dolore dolorum,
+                            eaque excepturi facilis incidunt ipsam iure laborum minima pariatur possimus quidem rem saepe,
+                            soluta unde voluptatem. Aliquam cupiditate esse magni optio quasi sapiente voluptatum? Assumenda
+                            dolore dolores fugiat nesciunt quis? Adipisci consequatur dolorum esse explicabo minus nesciunt
+                            obcaecati pariatur possimus sunt voluptatum! Ab animi aperiam architecto aspernatur assumenda
+                            atque autem commodi, consequuntur corporis dicta distinctio doloribus dolorum ea esse eveniet
+                            iure iusto libero magnam molestiae nam nemo non nostrum omnis placeat quas quidem quisquam quos
+                            ratione, rem repellat repellendus sint, sit suscipit ullam vero voluptatem voluptatum. Rem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--[if IE 8]><script src="../../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+    <!--[if !IE]> -->
+    <script src="../../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+    <!-- <![endif]-->
+    <script src="../../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/fx-utils-concat.js"></script>
+    <script>
+        $(function () {
+            FXM.bsAccordion();
+
+
+            var openAccordion = true;
+
+            $('.js-open-all').on('click', function () {
+                var $this = $(this);
+                var $collapse = $(this).next();
+                var openAll = $collapse.data('openAll');
+                var closeAll = $collapse.data('closeAll');
+
+                if (openAccordion) {
+                    if ($.isFunction(openAll)) {
+                        openAll($collapse);
+                    }
+                    $this.text('Expand All');
+                    openAccordion = false;
+                } else {
+                    if ($.isFunction(closeAll)) {
+                        closeAll($collapse);
+                    }
+                    $this.text('Collapse All');
+                    openAccordion = true;
+                }
+
+            });
+
+            // Custom Selector
+            FXM.bsAccordion({
+                panelSelector: '.js-my-custom-panel-group',
+                beforeInit: function ($jspanel) {
+                    $jspanel.removeAttr('data-offset');
+                },
+                offset: function () {
+                    return 0;
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

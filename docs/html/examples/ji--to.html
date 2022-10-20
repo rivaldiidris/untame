@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .big-box {
+            border: solid 1px black;
+            min-height: 500px;
+            padding: 25px;
+        }
+    </style>
+    <title>To | Example</title>
+</head>
+
+<a href="#test" class="bring-me-there">To There!</a>
+
+<div class="big-box"></div>
+<div class="big-box">
+    <h1 id="test">Yellow!</h1>
+</div>
+<div class="big-box"></div>
+<div class="big-box"></div>
+<div class="big-box"></div>
+
+<script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+    $(function () {
+        var myTarget = FXM.to('#test', {
+            onInitRun: false,
+            duration: 2000
+        });
+
+        $('.bring-me-there').on('click', function (e) {
+            e.preventDefault();
+            myTarget.Run();
+        });
+    });
+</script>
+</body>
+</html>

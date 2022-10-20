@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        .parent {
+            font-family: Arial;
+            margin: auto;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .parent .child {
+            background-color: #fffad7;
+            border: solid 3px #000;
+            margin: 0 0 25px 0;
+            padding: 25px;
+        }
+
+        .parent .child.active {
+            background-color: #b3daff;
+        }
+
+        .parent .child h2 {
+            margin: 0 0 25px 0;
+        }
+
+        .control {
+            background-color: #fffad7;
+            border: solid 3px #000;
+            bottom: 15px;
+            padding: 15px 25px;
+            position: fixed;
+            right: 15px;
+        }
+
+        .control p {
+            display: inline-block;
+            margin: 0 7px 0 0;
+        }
+
+        .fixed-top {
+            background-color: #f7ecb5;
+            border-bottom: 5px solid #000;
+            height: 50px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 9;
+        }
+
+        .fixed-top h1 {
+            margin: 7px;
+            padding: 0;
+        }
+    </style>
+    <title>Go To | Example</title>
+</head>
+<body>
+
+<div class="fixed-top">
+    <h1>This is fixed top ~ Blocking stuff</h1>
+</div>
+
+<div class="parent">
+    <div class="child">
+        <h2>Title 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+    <div class="child">
+        <h2>Title 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+    <div class="child active">
+        <h2>Title 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+    <div class="child">
+        <h2>Title 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+    <div class="child">
+        <h2>Title 5</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+    <div class="child">
+        <h2>Title 6</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+    <div class="child">
+        <h2>Title 7</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor doloremque, doloribus dolorum ea enim ipsam maiores nam necessitatibus numquam odio placeat possimus quas quidem quis reprehenderit sunt voluptates? Ab assumenda consequatur cum deserunt eaque enim explicabo hic illo iste labore laboriosam minus mollitia necessitatibus omnis, rerum, saepe temporibus voluptatem.</p>
+    </div>
+</div>
+
+<div class="control">
+    <p><strong>Go to:</strong></p>
+    <select name="item-select">
+        <option value="0">Item 1</option>
+        <option value="1">Item 2</option>
+        <option value="2">Item 3</option>
+        <option value="3">Item 4</option>
+        <option value="4">Item 5</option>
+        <option value="5">Item 6</option>
+        <option value="6">Item 7</option>
+    </select>
+</div>
+
+<!--[if IE 8]><script src="../../../assets/plugins/jquery/jquery-1.12.4.min.js"></script><![endif]-->
+<!--[if !IE]> --><script src="../../../assets/plugins/jquery/jquery-2.2.4.min.js"></script><!-- <![endif]-->
+<script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/js/fx-utils.js"></script>
+<script>
+    $(function () {
+        var $control = $(".control"),
+                $items = $(".parent").find(".child");
+
+        var goToInstance = FXM.goTo(".parent", {
+            onInitRun: true,
+            targetSelector: ".child.active",
+            disableAnimationAt: 767,
+            duration: 500,
+            delay: 300,
+            offsetElements: function () {
+                return $(".fixed-top").outerHeight() + 15;
+            },
+            onbeforestart: function () { alert("Before starting!"); },
+            oncomplete: function () { alert("Finished going to!"); }
+        });
+
+        $control.find("select").on("change", function () {
+            $items.removeClass("active");
+            $items.eq($(this).val()).addClass("active");
+            goToInstance.run();
+        });
+    });
+</script>
+</body>
+</html>
